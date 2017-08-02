@@ -4,7 +4,7 @@ var getIP = require('ipware')().get_ip
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	[ipaddress, language, software] = getHeaderParams(req)
+	var [ipaddress, language, software] = getHeaderParams(req)
 	createJson(res, ipaddress, language, software)
 })
 
