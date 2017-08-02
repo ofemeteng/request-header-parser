@@ -2,7 +2,7 @@
 A request header parser service
 
 #### Example usage:
-Load the root url
+[Load the root url]('https://request-hparser.herokuapp.com')
 
 #### Example output:
 ```javascript
