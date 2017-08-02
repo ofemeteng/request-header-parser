@@ -4,6 +4,7 @@ var router = express.Router()
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	[ipaddress, language, software] = getHeaderParams(req)
+	console.log(ipaddress)
 	createJson(res, ipaddress, language, software)
 })
 
