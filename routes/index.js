@@ -3,7 +3,9 @@ var router = express.Router()
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-	var ipaddress = req.ip.split(':')[3]
+	// var ipaddress = req.ip.split(':')[3]
+	var ipaddress = req.connection.remoteAddress.split(':')[3]
+	console.log(ipaddress)
 	var language = req.headers["accept-language"].split(',')[0]
 	var software = req.headers['user-agent']
 	var start = software.indexOf('(')
