@@ -2,10 +2,9 @@
   "name": "request-header-parser",
   "version": "1.0.0",
   "description": "A request header parser service",
-  "main": "app.js",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node ./bin/www"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
