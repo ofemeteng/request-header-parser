@@ -6,12 +6,12 @@ var router = express.Router()
 router.get('/', function(req, res, next) {
 	var ipaddress = ''
 	request({
-		uri: 'http://freegeoip.net/json',
+		uri: 'http://ip-api.com/json',
 		method: 'GET'
 	}, (error, response, body) => {
 		if (!error && response.statusCode == 200) {
 			let json = JSON.parse(body)
-			var ipaddress = json.ip
+			var ipaddress = json.query
 			var [language, software] = getHeaderParams(req)
 			createJson(res, ipaddress, language, software)
 		} else {
